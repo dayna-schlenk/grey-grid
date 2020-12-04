@@ -1,0 +1,56 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Main Grid */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    justify-items: stretch;
+    align-items: stretch;
+    height: 90vh;
+}
+
+.wrapper > div {
+    background: #eee;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+    background: #ddd;
+}
+
+.box1 {
+    /* align-self: start; */
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.box2 {
+    /* align-self: end; */
+    grid-column: 3;
+    grid-row: 1/3;
+}
+
+.box3 {
+    /* justify-self: end; */
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.box4 {
+    grid-column: 1;
+    grid-row: 2/4;
+    border: 1px solid #333;
+}
